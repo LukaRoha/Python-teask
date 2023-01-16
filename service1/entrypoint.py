@@ -1,7 +1,7 @@
 import sys
 import hashlib
 import pytest
-import unitest
+import unittest
 
 inp = sys.stdin.readlines()
 hash_func = inp[0].strip()
