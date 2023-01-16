@@ -1,11 +1,9 @@
+import requests
 import sys
-import hashlib
 
-inp = sys.stdin.readlines()
-hash_func = inp[0].strip()
-message = '\n'.join(inp[1:]).strip()
+SERVICE1_URL = "http://service.example.com:8080"
 
-h = hashlib.new(hash_func)
-h.update(str.encode(message))
+message = requests.get(sys.stdin.readline()).text
+data = ["md5", message]
 
-print (h.hexdigest())
+print(requests.post(SERVICE1_URL, data="\n".join(data)))
