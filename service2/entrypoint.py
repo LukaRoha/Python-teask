@@ -1,5 +1,7 @@
 import requests
 import sys
+import pytest
+import unittest
 
 SERVICE1_URL = "http://service.example.com:8080"
 
